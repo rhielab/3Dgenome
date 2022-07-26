@@ -13,7 +13,7 @@ First, generate sparse matrix format ending with bp.txt files using python scrip
 - The 3rd input is the prefix for the output
 ```
 python HiC_to_TopDom_format.py \
-uni1945_2_billion.hic \
+EXAMPLE.hic \
 50000 \
 2_Billion
 ```
