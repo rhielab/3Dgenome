@@ -1,6 +1,6 @@
 ## **Figure-1 Comparison of Hi-C and Micro-C data.** 
 
-1B. Chromatin interaction heatmaps of Hi-C and Micro-C data near chr7p14 region.
+**1B. Chromatin interaction heatmaps of Hi-C and Micro-C data near chr7p14 region.
 
 We used cooltools (https://github.com/open2c/cooltools) to generate the interaction heatmap. Below is the example code to run cooltools:
 
