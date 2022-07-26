@@ -6,7 +6,7 @@ The script ```topdom_comparison.R``` shows how we perform the overlap analysis u
 
 To run TopDom, below is the example code we used:
 
-Generate sparse matrix format ending with bp.txt files using python script.
+First, generate sparse matrix format ending with bp.txt files using python script.
 
 - The 1st input is the path to hic file.
 - The 2nd input is the resolution, here we choose 50KB. Please specify this option according to your need.
@@ -18,10 +18,9 @@ uni1945_2_billion.hic \
 2_Billion
 ```
 
-Generate topdom output
-The 1st input is the prefix
-The 2nd input is the resolution, here we choose 50KB. Please specify this option according to your need.
-
+And then generate topdom output
+- The 1st input is the prefix
+- The 2nd input is the resolution, here we choose 50KB. Please specify this option according to your need.
 ```
 Rscript run_TopDom.R \
 2_Billion \
