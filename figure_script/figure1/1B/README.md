@@ -4,7 +4,7 @@
 
 We used cooltools (https://github.com/open2c/cooltools) to generate the interaction heatmap. Here we provide a python script ```cooltools_heatmap.py``` to run cooltools. Below is the example code:
 
-To run the script, it requires the cooltools conda environment. 
+To run the script, please make sure that you have installed cooltools correctly. 
 - 1st - mcool file
 - 2nd - output path
 - 3rd - prefix for the output
