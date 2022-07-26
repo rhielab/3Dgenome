@@ -25,4 +25,5 @@ Rscript run_TopDom.R \
 tail -n +2 *topdom.bed | grep -v '==>' > 2_Billion-50000-topdom.bed
 ```
 For more usage instruction for TopDom, please refer to github page: https://github.com/HenrikBengtsson/TopDom.
+
 NOTE: We first run the 4DN Hi-C data processing pipeline (https://data.4dnucleome.org/resources/data-analysis/hi_c-processing-pipeline) to get the .hic file, which is the required input for TopDom. 
