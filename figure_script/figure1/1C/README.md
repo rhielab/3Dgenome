@@ -3,27 +3,27 @@ The script topdom_comparison.R shows how we perform the overlap analysis using t
 NOTED: We first run the 4DN Hi-C data processing pipeline (https://data.4dnucleome.org/resources/data-analysis/hi_c-processing-pipeline) to get the .hic file, which is the required input for TopDom. 
 
 To run TopDom, below is the example code we used:
-
+```
 #Generate sparse matrix format ending with bp.txt files using python script. 
 #The 1st input is the path to hic file
 #The 2nd input is the resolution, here we choose 50KB. Please specify this option according to your need.
 #The 3rd input is the prefix for the output
-```
 python HiC_to_TopDom_format.py \
 uni1945_2_billion.hic \
 50000 \
 2_Billion
 ```
+```
 #Generate topdom output
 #The 1st input is the prefix
 #The 2nd input is the resolution, here we choose 50KB. Please specify this option according to your need.
-```
 Rscript ../TopDom_example.R \
 2_Billion \
 50000
 ```
-#Combine topdom output and produce final output topdom bed file with domain information
+
 ```
+#Combine topdom output and produce final output topdom bed file with domain information
 tail -n +2 *topdom.bed | grep -v '==>' > 2_Billion-50000-topdom.bed
 ```
 For more usage instruction, please refer to github page: https://github.com/HenrikBengtsson/TopDom.
