@@ -2,15 +2,13 @@
 
 ### 1B. Chromatin interaction heatmaps of Hi-C and Micro-C data near chr7p14 region.
 
-We used cooltools (https://github.com/open2c/cooltools) to generate the interaction heatmap. 
+We used cooltools (https://github.com/open2c/cooltools) to generate the interaction heatmap. Here we provide a python script ```cooltools_heatmap.py``` to run cooltools. Below is the example code:
 
-Here we provide a python script ```cooltools_heatmap.py``` to run cooltools. Below is the example code:
-
+To run the script, it requires the cooltools conda environment. 
+- 1st - mcool file
+- 2nd - output path
+- 3rd - prefix for the output
 ```
-#To run the script, require the cooltools conda environment. 
-#1st - mcool file
-#2nd - output path
-#3rd - prefix for the output
 python cooltools_heatmap.py \
 input/uni1945_2.5kb_1_billion.filt.mcool \
 output/ \
