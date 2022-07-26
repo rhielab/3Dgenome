@@ -17,7 +17,7 @@ uni1945_2_billion.hic \
 #Generate topdom output
 #The 1st input is the prefix
 #The 2nd input is the resolution, here we choose 50KB. Please specify this option according to your need.
-Rscript ../TopDom_example.R \
+Rscript run_TopDom.R \
 2_Billion \
 50000
 ```
