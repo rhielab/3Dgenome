@@ -13,7 +13,7 @@ See below code for usage instruction:
 
 Load the function. To run it, make sure you have ```fuzzyjoin``` and ```dplyr``` libraries in your R environment:
 ```
-source('Loop_comparison_Tim.R')
+source('Loop_comparison.R')
 ```
 
 Then load the loop data. You should have at least two loop data to run this analysis. But let's use four as example here:
