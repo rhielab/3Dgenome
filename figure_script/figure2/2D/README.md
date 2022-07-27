@@ -42,7 +42,7 @@ output_path= './output'
 )
 ```
 
-Or suddendly if you want a different priority. For example, loop_1 > loop_2 > loop_3 > loop_4, then:
+Or suddendly you want a different priority. For example, loop_1 > loop_2 > loop_3 > loop_4, then:
 ```
 loop_comparison(
 loop_list = loop_list,
