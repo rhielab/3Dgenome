@@ -14,4 +14,4 @@ checkCGI_promoter(loop_data= myloopdata,
 output_path='./output', 
 prefix = 'outputprefix')
 ```
-In the output, you will see the promoter-relevant files ending with ```Promoter_inLoop.bed``` or ```Promoter_nonLoop.bed```. If you are using the correct CGI reference, then you can also check files containing with ```CGIPromoter```. You can check 'summary.txt' for all the necessary stats.
+In the output, you will see the promoter-relevant files ending with ```Promoter_inLoop.bed``` or ```Promoter_nonLoop.bed```. If you are using the correct CGI reference, then you can also check files containing with ```CGIPromoter```. You can check ```summary.txt``` for all the necessary stats.
