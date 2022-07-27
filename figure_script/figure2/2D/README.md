@@ -46,7 +46,7 @@ Or suddendly you want a different priority. For example, loop_1 > loop_2 > loop_
 ```
 loop_comparison(
 loop_list = loop_list,
-priority = c(1,2,3,4)
+priority = c(4,3,2,1)
 output_path= './output2'
 )
 ```
