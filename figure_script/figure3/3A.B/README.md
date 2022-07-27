@@ -1,8 +1,8 @@
 ## Figure3 Chromatin loops near structural variants.
 
-### 2(A) Numbers of inter and intra-chromosomal structural variants identified from Hi-C and Micro-C data are shown. 2(B) Numbers of each category of structural variants identified from Hi-C and Micro-C data are shown.
+### 2(A) Numbers of inter and intra-chromosomal structural variants identified from Hi-C and Micro-C data are shown. 2(B) Numbers of each category of structural variants identified from Hi-C and Micro-C data are shown. 2(C)Numbers of loops identified around the structural variants from Hi-C and Micro-C data are shown at 5kb and 10kb resolutions.
 
-We used NeoLoopFinder (Wang et al., 2021) to identify loops near the structural variants using Hi-C and Micro-C data. As the figure is showing the stats number from NeoLoopFinder, here we show our code and relevant scripts to run this analysis. To start with, we first runed hic_breakfinder (https://github.com/dixonlab/hic_breakfinder) to identify the structural variants. 
+We used NeoLoopFinder (Wang et al., 2021) to identify loops near the structural variants using Hi-C and Micro-C data. As the figures are showing the stats number from NeoLoopFinder, here we explain our code and relevant scripts to run NeoLoopFinder. To start with, we first runed hic_breakfinder (https://github.com/dixonlab/hic_breakfinder) to identify the structural variants. 
 
 The necessary input files for hic_breakfinder are ```.bam``` as well as the intra and inter chromosomal expectation file which can be found at https://salkinstitute.box.com/s/m8oyv2ypf8o3kcdsybzcmrpg032xnrgx. Here we used ```inter_expect_1Mb.hg38.txt``` and ```intra_expect_100kb.hg38.txt```.
 
