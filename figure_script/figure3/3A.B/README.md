@@ -46,4 +46,4 @@ neoloop-caller \
 --prob 0.95 \
 --balance-type ICE
 ```
-The loops identified near structural variants are save in ```neo-loops.txt```.
+The loops identified near structural variants are save in ```neo-loops.txt```. For more detailed instruction about NeoLoopFinder, please refer to https://github.com/XiaoTaoWang/NeoLoopFinder.
