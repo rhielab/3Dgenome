@@ -2,7 +2,7 @@
 
 ### 3E. An example heatmap of Micro-C data near the ARID1A gene that includes inversion structural variant is shown on the top. Under the heatmap, RNA-seq and RefSeq gene tracks are shown. Example neoloops newly gained due to the structural variants are circled in blue.
 
-To generate the heatmap together with multipe tracks of data, here we provide a ```plotting_NEOheatmap.py``` script to generate such heatmap. The necessary input to run this script include ```.cool``` with additional ```assemblies.txt``` and ```neo-loops.txt``` which are generate from NeoLoopFinder (Wang et al., 2021). Please refert to [
+To generate the heatmap together with multipe tracks of data, here we provide a ```plotting_NEOheatmap.py``` script. The necessary input to run this script include ```.cool``` with additional ```assemblies.txt``` and ```neo-loops.txt``` which are generate from NeoLoopFinder (Wang et al., 2021). Please refert to [
 /figure_script/figure3/3A.B.C](https://github.com/rhielab/3Dgenome/tree/main/figure_script/figure3/3A.B.C) for more details on how to generate these two files.
 
 Below is an example code:
