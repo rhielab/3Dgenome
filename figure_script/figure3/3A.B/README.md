@@ -8,7 +8,7 @@ The necessary input files for hic_breakfinder are ```.bam``` as well as the intr
 
 The example code to run hic_breakfinder:
 ```
-/PATH/TO/hic_breakfinder \
+hic_breakfinder \
 --bam-file input.bam \ 
 --exp-file-inter inter_expect_1Mb.hg38.txt \
 --exp-file-intra intra_expect_100kb.hg38.txt \
