@@ -24,3 +24,4 @@ label = 'OutputPrefix',
 output_path = './output' 
 )
 ```
+The output is a bunch of loop files with different regulatory elements combination, meaning that the loops with different regulatory elements at two anchors. Additionally, a ```RegSummary.txt``` for the number of loops in different categories will also be created.
