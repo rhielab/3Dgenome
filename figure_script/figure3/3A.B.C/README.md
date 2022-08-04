@@ -15,9 +15,9 @@ hic_breakfinder \
 --name OutputPrefix
 ```
 
-We then used ```convert_break_sv.py``` to convert the ```breaks.txt``` to ```sv.txt``` which is used as the input for NeoLoopFinder.
+We then used [prepare-SV-breakpoints.py](https://github.com/XiaoTaoWang/NeoLoopFinder/blob/master/scripts/prepare-SV-breakpoints.py) from [NeoLoopFinder GitHub](https://github.com/XiaoTaoWang/NeoLoopFinder) to convert the ```breaks.txt``` to ```sv.txt``` which is used as the input for NeoLoopFinder.
 ```
-python convert_break_sv.py \
+python prepare-SV-breakpoints.py \
 OutputPrefix.breaks.txt \
 OutputPrefix.sv.txt
 ```
