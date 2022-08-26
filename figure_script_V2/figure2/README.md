@@ -57,7 +57,7 @@ OUTPUT_PATH
 
 Outputs include a bunch of ```.bedpe``` files for loops falling into specific category, along with a ```summary.txt``` where the number and fraction of loops detected in different categoires are shown.
 
-### 2B. Numbers of loops shared (between any datasets) or unique among Hi-C 1 billion, Micro-C 1 billion, 2 billion, and 3 billion data.
+### 2D. Numbers of loops shared (between any datasets) or unique among Hi-C 1 billion, Micro-C 1 billion, 2 billion, and 3 billion data.
 
 Here we provide an in-house Rscript ```Loop_comparison.R``` to run loop intersection analysis between two libraries, using a list of loop data as the input. 
 
