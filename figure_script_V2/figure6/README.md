@@ -26,7 +26,7 @@ It will print out the t-test result.
 
 ### 6(B) Average chromatin accessibility levels (%) of active promoters, enhancers, insulators, and NDRs without features that are in loop (black) vs those that are not in loop (orange) are shown. 6(C) Average DNA methylation levels of active promoters, enhancers, insulators, and NDRs without features that are in loop (black) vs those that are not in loop (orange) are shown.
 
-Panel C and D are generated using Bistools (Lay et al, 2015). Here we provide our example code to run Bistools. Basically, we used bistools to visualize NOMEseq signal around interested sites (e.g. promoter, enhancer, insulator etc.) in density plot, average plot and heatmap. Before the actual code to run Bisplot, we first specified some necessary variables:
+Panel C and D are generated using Bistools (Lay et al, 2015). Here we provide our example code to run Bistools. Basically, we used bistools to visualize NOMEseq signal around interested sites (e.g. promoter, enhancer, insulator etc.) in density plot, average plot and heatmap. Before the actual code to run Bisplot, some necessary variables need to be specified at first:
 ```
 OUTPUTDIR=/PATH/TO/OUTPUTDIR
 Prefix='OutPutprefix'
