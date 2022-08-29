@@ -53,7 +53,7 @@ Samples.txt
 
 To generate average plot:
 ```
-perl alignWigToBed.pl 
+perl alignWigToBed.pl \
 HCG.bw GCH.bw \
 --locs $BED \
 --average \
