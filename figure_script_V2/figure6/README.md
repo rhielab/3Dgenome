@@ -28,7 +28,6 @@ It will print out the t-test result.
 
 Panel C and D are generated using Bistools (Lay et al, 2015). Here we provide our example code to run Bistools. Basically, we used bistools to visualize NOMe-seq signal around interested sites (e.g. promoter, enhancer, insulator etc.) in density plot, average plot and heatmap.  Before the actual code to run Bisplot, some necessary variables need to be specified at first. Please noted that the ```HCG.bw``` and ```GCH.bw``` are generated from Bis-SNP ([Liu et al. 2012](https://genomebiology.biomedcentral.com/articles/10.1186/gb-2012-13-7-r61)).
 ```
-
 OUTPUTDIR=/PATH/TO/OUTPUTDIR
 Prefix='OutPutprefix'
 NAME='shortNAME' #short name like 'CTCF' or 'enhancer' or 'H3K4me3'
