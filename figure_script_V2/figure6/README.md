@@ -91,4 +91,4 @@ perl alignWigToBed.DKO_paper_version.pl \
 Twosamples.txt
 ```
 
-Please check their github for more usage instruction (https://github.com/dnaase/Bis-tools).
+If you are interested to use BisTools, please check its github page for more usage instruction (https://github.com/dnaase/Bis-tools).
