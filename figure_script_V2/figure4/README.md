@@ -1,6 +1,5 @@
 ## Figure4 Regulatory elements and nucleosome-depleted regions (NDRs) that are involved in loops.
 
-
 This figure is about the regulatory elements (Promoter, Enhancer, Insulator, NDR, repressed regions etc.) involved in loops. We used ChIP-seq data of histone marks (Promoter - H3K4me3, Enhancer - H3K27ac, Repressed - H2K27me3 etc.) as well as CTCF to identify these regions. We processed ChIP-seq data based on the pipeline from ENCODE. Please check https://www.encodeproject.org/chip-seq/histone/
 ### 4(A) Genome browser screenshots of ChIP-seq, NOMe-seq, Hi-C, Micro-C, and RefSeq Genes. 4(B) Fractions of regulatory elements that intersect with loop anchors identified from Hi-C 1 billion, Micro-C 1 billion, 2 billion, and 3 billion data. 4(C) Numbers of loops belong to different loop categories defined by intersecting the loop anchors with different types of regulatory elements
 
