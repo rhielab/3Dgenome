@@ -27,6 +27,8 @@ output_path = './output'
 ```
 The output is a bunch of loop files with different regulatory elements combination, meaning that the loops with different regulatory elements at two anchors. Additionally, a ```RegSummary.txt``` for the number of loops in different categories will also be created.
 
+### 4D. Comparison of number of promoter-enhancer loops identified from Hi-C 1 billion, Micro-C 1 billion, 2 billion and 3 billion data. 
+
 ### 4E. Significance of chromatin interaction (q-value identified by Mustache) for top 5 loop categories. A mean q-value is shown in red. A median q-value is shown in blue.
 
 Here we just show an example Rscript ```plot_average_q_value.R``` to generate the q-value violin plot of different chromatin interactions. Please noted that you need to first generate loop with regulatory element categories, as described above.
