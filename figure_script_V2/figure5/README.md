@@ -1,5 +1,7 @@
 ## Figure5 Promoter capture Micro-C data analysis. 
 
+### 5A. An overview of promoter capture Micro-C experimental procedure, including the promoter probe design scheme. Probes (green bar) with biotins (orange circle) are designed surrounding TSSs, and Micro-C reads are pulled down using the probes for promoter capture Micro-C.
+
 ### 5B. Chromatin interaction heatmaps of Micro-C and promoter capture Micro-C data near chr1q41 region at 2kb (top), 5kb (middle), and 10kb (bottom) resolutions.
 
 We used cooltools to generate the chromaitn interaction heatmap. Please refer to [figure_script_V2/figure1](https://github.com/rhielab/3Dgenome/tree/main/figure_script_V2/figure1) for the usage.
