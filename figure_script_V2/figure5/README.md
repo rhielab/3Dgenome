@@ -27,6 +27,6 @@ prefix = 'outputprefix')
 ```
 In the output, you will see two files ending with ```inLoop.bed``` or ```nonLoop.bed```. You can check ```summary.txt``` for the necessary stats.
 
-### 5(E) Numbers of loops and loop categories identified from promoter capture Micro-C data.
+### 5E. Numbers of loops and loop categories identified from promoter capture Micro-C data.
 
 The analysis is bacially the stats from the regulatory elements distribution analysis among promoter capture Micro-C libraries. Please refer to [figure_script_v2/figure4](https://github.com/rhielab/3Dgenome/tree/main/figure_script_v2/figure4) for such analysis.
