@@ -69,3 +69,5 @@ uni1945_1kb_1_billion.filt.mcool \
 ./output \
 Micro_C_2kb_Mustache_Loop
 ```
+
+### 1F. Triangular heatmaps of Hi-C and Micro-C near chr7p14 region and loops identified from each data are shown at the bottom. 
