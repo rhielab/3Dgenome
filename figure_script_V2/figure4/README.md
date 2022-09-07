@@ -31,4 +31,4 @@ The output is a bunch of loop files with different regulatory elements combinati
 
 ### 4E. Significance of chromatin interaction (q-value identified by Mustache) for top 5 loop categories. A mean q-value is shown in red. A median q-value is shown in blue.
 
-Here we show an example Rscript ```plot_average_q_value.R``` to generate the q-value violin plot of different chromatin interactions. Please noted that you need to first generate loop with regulatory element categories, as described above.
+Here we show an example Rscript ```plot_average_q_value.R``` to generate the q-value violin plot of different chromatin interactions. The input ```.tsv``` files are generated from the ```Loop_Rep_overlapAnalysis.R``` Rscript as described above. Please noted that you need to first generate loop with regulatory element categories, as described above.
