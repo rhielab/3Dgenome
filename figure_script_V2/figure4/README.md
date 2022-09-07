@@ -1,7 +1,7 @@
 ## Figure4 Regulatory elements and nucleosome-depleted regions (NDRs) that are involved in loops.
 
 This figure is about the regulatory elements (Promoter, Enhancer, Insulator, NDR, repressed regions etc.) involved in loops. We used ChIP-seq data of histone marks (Promoter - H3K4me3, Enhancer - H3K27ac, Repressed - H2K27me3 etc.) as well as CTCF to identify these regions. We processed ChIP-seq data based on the pipeline from ENCODE. Please check https://www.encodeproject.org/chip-seq/histone/
-### 4(A) Genome browser screenshots of ChIP-seq, NOMe-seq, Hi-C, Micro-C, and RefSeq Genes. 4(B) Fractions of regulatory elements that intersect with loop anchors identified from Hi-C 1 billion, Micro-C 1 billion, 2 billion, and 3 billion data. 4(C) Numbers of loops belong to different loop categories defined by intersecting the loop anchors with different types of regulatory elements
+### 4A. Genome browser screenshots of ChIP-seq, NOMe-seq, Hi-C, Micro-C, and RefSeq Genes. 4B. Fractions of regulatory elements that intersect with loop anchors identified from Hi-C 1 billion, Micro-C 1 billion, 2 billion, and 3 billion data. 4C. Numbers of loops belong to different loop categories defined by intersecting the loop anchors with different types of regulatory elements
 
 Here we provide an Rscript ```Loop_Rep_overlapAnalysis.R``` to perform the genomic regulatory element distribution analysis for loop data. See below instruction if you are interested to use this script.
 
@@ -27,6 +27,6 @@ output_path = './output'
 ```
 The output is a bunch of loop files with different regulatory elements combination, meaning that the loops with different regulatory elements at two anchors. Additionally, a ```RegSummary.txt``` for the number of loops in different categories will also be created.
 
-### 4(E) Significance of chromatin interaction (q-value identified by Mustache) for top 5 loop categories. A mean q-value is shown in red. A median q-value is shown in blue.
+### 4E. Significance of chromatin interaction (q-value identified by Mustache) for top 5 loop categories. A mean q-value is shown in red. A median q-value is shown in blue.
 
 Here we just show an example Rscript ```plot_average_q_value.R``` to generate the q-value violin plot of different chromatin interactions. Please noted that you need to first generate loop with regulatory element categories, as described above.
