@@ -31,4 +31,4 @@ In the output, you will see two files ending with ```inLoop.bed``` or ```nonLoop
 
 ### 5E. Numbers of loops and loop categories identified from promoter capture Micro-C data.
 
-The analysis is bacially the stats from the regulatory elements distribution analysis among promoter capture Micro-C libraries. Please refer to [figure_script_v2/figure4](https://github.com/rhielab/3Dgenome/tree/main/figure_script_v2/figure4) for such analysis.
+The analysis is bacially the stats from the regulatory elements distribution analysis among promoter capture Micro-C libraries. Please refer to [figure_script_v2/figure4](https://github.com/rhielab/3Dgenome/tree/main/figure_script_V2/figure4) for such analysis.
