@@ -1,4 +1,6 @@
 ## Figure1 Comparison of Hi-C and Micro-C data.
+### 1A. Experimental methods of Hi-C and Micro-C. Unlike Hi-C that uses restriction enzyme, Micro-C uses MNase, allowing to fragment chromatin to mono, di-, and tri-nucleosomes. 
+
 ### 1B. Chromatin interaction heatmaps of Hi-C and Micro-C data near chr7p14 region.
 We used cooltools (https://github.com/open2c/cooltools) to generate the interaction heatmap. Here we provide a python script ```cooltools_heatmap.py``` to run cooltools. The required input to generate this plot is ```.mcool``` file. Below is the example code:
 
@@ -45,6 +47,8 @@ Combine topdom output and produce final output topdom bed file with domain infor
 tail -n +2 *topdom.bed | grep -v '==>' > 2_Billion-50000-topdom.bed
 ```
 For more usage instruction for TopDom, please refer to github page: https://github.com/HenrikBengtsson/TopDom.
+
+### 1D. Triangular heatmaps of Hi-C and Micro-C near chr1p32 region. TADs identified from each data are shown at the bottom.
 
 ### 1E. Average chromatin interaction signals at shared loops (loops found in Hi-C and Micro-C) and unique loops. 
 
