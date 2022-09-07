@@ -4,7 +4,7 @@
 
 ### 5B. Chromatin interaction heatmaps of Micro-C and promoter capture Micro-C data near chr1q41 region at 2kb (top), 5kb (middle), and 10kb (bottom) resolutions.
 
-We used cooltools to generate the chromaitn interaction heatmap. Please refer to [figure_script_V2/figure1](https://github.com/rhielab/3Dgenome/tree/main/figure_script_V2/figure1) for the usage.
+We used cooltools to generate the chromaitn interaction heatmap. We used the same script ```cooltools_heatmap.py``` as described in [figure_script_V2/figure1](https://github.com/rhielab/3Dgenome/tree/main/figure_script_V2/figure1).
 
 ### 5C. Significance of chromatin interaction (Chicago score (-log p-value), Mustache (q-value)) for loops found in both promoter capture Micro-C and Micro-C (shared) and only one data is plotted. A mean value in shown in red. A median value is shown in blue.
 
@@ -31,4 +31,4 @@ In the output, you will see two files ending with ```inLoop.bed``` or ```nonLoop
 
 ### 5E. Numbers of loops and loop categories identified from promoter capture Micro-C data.
 
-The analysis is bacially the stats from the regulatory elements distribution analysis among promoter capture Micro-C libraries. Please refer to [figure_script_v2/figure4](https://github.com/rhielab/3Dgenome/tree/main/figure_script_V2/figure4) for such analysis.
+The analysis is bacially the stats from the regulatory elements distribution analysis among promoter capture Micro-C libraries. We used the same script ```Loop_Rep_overlapAnalysis.R``` as described in [figure_script_v2/figure4](https://github.com/rhielab/3Dgenome/tree/main/figure_script_V2/figure4).
