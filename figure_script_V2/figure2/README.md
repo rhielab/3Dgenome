@@ -40,7 +40,7 @@ done
 
 ### 2C. Fractions of loops that have different lengths (distances) found from Hi-C 1 billion, Micro-C 1 billion, 2 billion, and 3 billion data are shown. 
 
-We used ```category_loop_distance.sh``` to classify a specific loop data into different loop distance categoires. (<200kb, 200kb-400kb, 400kb-600kb, 600kb-800kb, 800kb-1Mb, > 1Mb) and summarize the fraction of each category. To use this script:
+We used a bash script ```category_loop_distance.sh``` to classify a specific loop data into different loop distance categoires. (<200kb, 200kb-400kb, 400kb-600kb, 600kb-800kb, 800kb-1Mb, > 1Mb) and summarize the fraction of each category. To use this script:
 
 ```
 bash category_loop_distance.sh \
@@ -59,7 +59,7 @@ Outputs include a bunch of ```.bedpe``` files for loops falling into specific ca
 
 ### 2D. Numbers of loops shared (between any datasets) or unique among Hi-C 1 billion, Micro-C 1 billion, 2 billion, and 3 billion data.
 
-We used an in-house Rscript ```Loop_comparison.R``` to run loop intersection analysis between two libraries, using a list of loop data as the input. 
+We used an Rscript ```Loop_comparison.R``` to run loop intersection analysis between two libraries, using a list of loop data as the input. 
 
 The output files in the output folder include:
 - All the original loop data added with comparison 0/1 matrix.
