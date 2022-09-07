@@ -1,6 +1,6 @@
 ## Figure3 Chromatin loops near structural variants.
 
-### 3(A) Numbers of inter and intra-chromosomal structural variants identified from Hi-C and Micro-C data are shown. 3(B) Numbers of each category of structural variants identified from Hi-C and Micro-C data are shown. 3(C) Numbers of loops identified around the structural variants from Hi-C and Micro-C data are shown at 5kb and 10kb resolutions.
+### 3A. Numbers of inter and intra-chromosomal structural variants identified from Hi-C and Micro-C data are shown. 3B. Numbers of each category of structural variants identified from Hi-C and Micro-C data are shown. 3C. Numbers of loops identified around the structural variants from Hi-C and Micro-C data are shown at 5kb and 10kb resolutions.
 
 We used NeoLoopFinder (Wang et al., 2021) to identify loops near the structural variants using Hi-C and Micro-C data. As the figures are showing the stats number from NeoLoopFinder, here we explain our code and relevant scripts to run NeoLoopFinder. To start with, we first runed hic_breakfinder (https://github.com/dixonlab/hic_breakfinder) to identify the structural variants. 
 
@@ -48,11 +48,11 @@ neoloop-caller \
 ```
 The loops identified near structural variants are save in ```neo-loops.txt```. For more detailed instruction about NeoLoopFinder, please refer to https://github.com/XiaoTaoWang/NeoLoopFinder.
 
-### 3(D) Numbers of neoloops (loops newly gained due to the structural variants) that are shared (between any datasets) or unique among Hi-C 1 billion, Micro-C 1 billion, 2 billion and 3 billion data are shown.
+### 3D. Numbers of neoloops (loops newly gained due to the structural variants) that are shared (between any datasets) or unique among Hi-C 1 billion, Micro-C 1 billion, 2 billion and 3 billion data are shown.
 
 Here is the loop-comparison analysis, we used the same script as desribed in [figure_script/figure2/2D](https://github.com/rhielab/3Dgenome/tree/main/figure_script/figure2/2D). Please refer for more details.
 
-### 3(E). An example heatmap of Micro-C data near the ARID1A gene that includes inversion structural variant is shown on the top. Under the heatmap, RNA-seq and RefSeq gene tracks are shown. Example neoloops newly gained due to the structural variants are circled in blue.
+### 3E. An example heatmap of Micro-C data near the ARID1A gene that includes inversion structural variant is shown on the top. Under the heatmap, RNA-seq and RefSeq gene tracks are shown. Example neoloops newly gained due to the structural variants are circled in blue.
 
 To generate the heatmap together with multipe tracks of data, here we provide a ```plotting_NEOheatmap.py``` script. The necessary input to run this script include ```.cool``` with additional ```assemblies.txt``` and ```neo-loops.txt``` which are generate from NeoLoopFinder (Wang et al., 2021). Please refert to [
 /figure_script/figure3/3A.B.C](https://github.com/rhielab/3Dgenome/tree/main/figure_script/figure3/3A.B.C) for more details on how to generate these two files.
