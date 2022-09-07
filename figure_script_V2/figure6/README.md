@@ -26,7 +26,7 @@ It will print out the t-test result.
 
 ### 6B. Average chromatin accessibility levels (%) of active promoters, enhancers, insulators, and NDRs without features that are in loop (black) vs those that are not in loop (orange) are shown. 6C. Average DNA methylation levels of active promoters, enhancers, insulators, and NDRs without features that are in loop (black) vs those that are not in loop (orange) are shown.
 
-Panel C and D are generated using Bistools (Lay et al, 2015). Here we provide our example code to run Bistools. Basically, we used bistools to visualize NOMe-seq signal around interested sites (e.g. promoter, enhancer, insulator etc.) in density plot, average plot and heatmap.  Before the actual code to run Bisplot, some necessary variables need to be specified at first. Please noted that the ```HCG.bw``` and ```GCH.bw``` are generated from Bis-SNP ([Liu et al. 2012](https://genomebiology.biomedcentral.com/articles/10.1186/gb-2012-13-7-r61)).
+Panel C and D are generated using Bistools (Lay et al, 2015). Here we provide our example code to run Bistools. Basically, we used bistools to visualize NOMe-seq signal around interested sites (e.g. promoter, enhancer, insulator etc.) in density plot, average plot and heatmap.  To make these graphs, the necessary input files are the ```HCG.bw``` and ```GCH.bw```, which are generated from NOMe-seq data using Bis-SNP ([Liu et al. 2012](https://genomebiology.biomedcentral.com/articles/10.1186/gb-2012-13-7-r61)), as well as a ```.bed``` file (e.g. Histong Modification or CTCF narrowPeak file) which is used to specify the regions that you want to plot the signals on.
 ```
 OUTPUTDIR=/PATH/TO/OUTPUTDIR
 Prefix='OutPutprefix'
@@ -36,50 +36,35 @@ GCHBW='/PATH/TO/GCH.bw' #path to the GCG bigwig file from NOMEseq data
 BED='/PATH/TO/GCH.bw' #a bed file to specifiy the genomic regions where you want to visualize the signal
 ```
 
-To generate heatmap:
-```
-perl alignWigToBed.pl \
---density_bar \
---enrich_max 4.0 \
---result_dir $OUTPUTDIR \
---prefixs $Prefix \
---locs $L1 \
---category_names $NAME \
---sample_names $NAME \
---experiment_names Methylation --experiment_names Accessibility \
---rep_num_experiments 1 --rep_num_experiments 1 \
-Samples.txt
-```
-
 To generate average plot:
 ```
 perl alignWigToBed.pl \
 HCG.bw GCH.bw \
---locs $BED \
+--locs /PATH/TO/BED \
 --average \
---prefixs $Prefix \
+--prefixs output_prefix \
 --plot_x_axis_scale 1000 \
 --data_matrix_scale 1200 \
 --bin_size 20 \
 --bin_size_align 1 \
 --plot_x_axis_scale 1000 \
---result_dir $Dir \
+--result_dir /path/to/outputfolder \
 --smooth \
 --colors black --colors green \
---lengends $HCGBW --lengends $GCHBW
+--lengends HCG.bw --lengends GCH.bw
 ```
 
-To genreate heatmap:
+To genreate heatmap, please noted that the ```shortName``` should be any features that describe your selected bed files (e.g Regulatory elements or Histone Marks):
 ```
 perl alignWigToBed.DKO_paper_version.pl \
---prefixs $Prefix \
+--prefixs output_prefix \
 --heatmap_with_reps \
 --data_matrix_scale 1200 \
 --bin_size 20 --bin_size_align 1 \
 --plot_x_axis_scale 1000 \
---result_dir $OUTPUTDIR \
---locs $BED \
---category_names $NAME \
+--result_dir /path/to/outputfolder \
+--locs /PATH/TO/BED \
+--category_names shortName \
 --experiment_names Methylation  \
 --experiment_names Accessibility \
 --experiment_names Methylation2  \
