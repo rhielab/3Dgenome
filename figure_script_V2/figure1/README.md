@@ -10,9 +10,9 @@ To run the script, please make sure that you have installed cooltools correctly.
 - 3rd - prefix for the output
 ```
 python cooltools_heatmap.py \
-input/uni1945_2.5kb_1_billion.filt.mcool \
+input/EXAMPLE.mcool \
 output/ \
-20kb_chr7_31M-43M_Micro_C_1_Bil
+output_prefix
 ```
 
 ### 1C. Venn diagram of TADs identified from Hi-C and Micro-C.
@@ -30,7 +30,7 @@ First, generate sparse matrix format ending with bp.txt files using python scrip
 python HiC_to_TopDom_format.py \
 EXAMPLE.hic \
 50000 \
-2_Billion
+output_prefix
 ```
 
 And then generate topdom output
@@ -44,7 +44,7 @@ Rscript run_TopDom.R \
 
 Combine topdom output and produce final output topdom bed file with domain information
 ```
-tail -n +2 *topdom.bed | grep -v '==>' > 2_Billion-50000-topdom.bed
+tail -n +2 *topdom.bed | grep -v '==>' > EXAMPLE-topdom.bed
 ```
 For more usage instruction for TopDom, please refer to github page: https://github.com/HenrikBengtsson/TopDom.
 
@@ -64,10 +64,10 @@ To run ```cooltools_pileup.py```, cooltools conda environment is required
 - 4th - output prefix
 ```
 python cooltools_pileup.py \
-uni1945_1kb_1_billion.filt.mcool \
-1_Billion_Mustache-2kb-all-loop.bedpe \
+EXAMPLE.mcool \
+EXAMPLE-loop.bedpe \
 ./output \
-Micro_C_2kb_Mustache_Loop
+output_prefix
 ```
 
 ### 1F. Triangular heatmaps of Hi-C and Micro-C near chr7p14 region and loops identified from each data are shown at the bottom. 
