@@ -8,7 +8,7 @@ We used cooltools to generate the chromaitn interaction heatmap. Please refer to
 
 ### 5C. Significance of chromatin interaction (Chicago score (-log p-value), Mustache (q-value)) for loops found in both promoter capture Micro-C and Micro-C (shared) and only one data is plotted. A mean value in shown in red. A median value is shown in blue.
 
-We don't provide the code here. Please refer to [figure_script_V2/figure4](https://github.com/rhielab/3Dgenome/tree/main/figure_script_V2/figure4) for violin plot generation.
+We used the same script ```plot_average_q_value.R``` as described in [figure_script_V2/figure4](https://github.com/rhielab/3Dgenome/tree/main/figure_script_V2/figure4) for violin plot generation.
 
 ### 5D. Fractions of active promoters that intersect with the loop anchors from Micro-C 1 billion, 2 billion, 3 billion data or promoter capture Micro-C data are shown (left). A fraction of active promoters that intersect with loop anchors from any datasets is shown in grey (In loop) while the one not in loop is shown in orange (Not in loop) (right).
 
