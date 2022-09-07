@@ -12,7 +12,7 @@ We don't provide the code here. Please refer to [figure_script_V2/figure4](https
 
 ### 5D. Fractions of active promoters that intersect with the loop anchors from Micro-C 1 billion, 2 billion, 3 billion data or promoter capture Micro-C data are shown (left). A fraction of active promoters that intersect with loop anchors from any datasets is shown in grey (In loop) while the one not in loop is shown in orange (Not in loop) (right).
 
-Here we provide an Rscript ```check_REGelement.R``` to find out the regulatory elements involved in loops. To run this script, the loop data under specific resolution as well as the regulatory element data (in ```.bed``` format) is necessary. Check below code for example usage to identify enhancers involved in loop under 5kb resolution.
+We used an Rscript ```check_REGelement.R``` to find out the regulatory elements involved in loops. To run this script, the loop data under specific resolution as well as the regulatory element data (in ```.bed``` format) is necessary. Check below code for example usage to identify enhancers involved in loop under 5kb resolution.
 ```
 source('check_REGelement.R')
 myloopdata <- read.table(file = '/PATH/TO/LoopData')
