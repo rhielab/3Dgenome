@@ -18,7 +18,7 @@ plotHeatmap \
 -m output.RPKM.gz \
 -o output.pdf
 ```
-and also used to perform t-test. Here we provide an Rscript ```t_test_4deeptools.R``` to perform t-test at the center of the signal between in-loop and not in-loop data. To use:
+and also used to perform t-test. We used an Rscript ```t_test_4deeptools.R``` to perform t-test at the center of the signal between in-loop and not in-loop data. To use:
 ```
 Rscript t_test_4deeptools.R /PATH/TO/inloop.RPKM.gz /PATH/TO/notinloop.RPKM.gz
 ```
