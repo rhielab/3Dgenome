@@ -19,7 +19,7 @@ myloopdata <- read.table(file = '/PATH/TO/LoopData')
 #E.g you want to find the enhancers involved in loops.
 myEnhdata <- read.table(file = '/PATH/TO/EnhancerData')
 
-checkCGI_promoter(
+checkREG_element(
 loop_data = myloopdata, 
 reg_data = myEnhdata,
 reg_type = 'Enhancer', #To clarify, this option is just a character to help note the regulatory element you used.
