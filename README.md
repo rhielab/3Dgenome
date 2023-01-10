@@ -314,7 +314,7 @@ Here we show an example Rscript ```plot_average_q_value.R``` to generate the q-v
 
 ### 5B. Chromatin interaction heatmaps of Micro-C and promoter capture Micro-C data near chr1q41 region at 2kb (top), 5kb (middle), and 10kb (bottom) resolutions.
 
-We used cooltools to generate the chromaitn interaction heatmap. We used the same script ```cooltools_heatmap.py``` as described in [figure_script_V2/figure1](https://github.com/rhielab/3Dgenome/tree/main/figure_script_V2/figure1).
+We used cooltools to generate the chromaitn interaction heatmap. We used the same script ```cooltools_heatmap.py``` as described in figure1.
 
 ### 5C. Significance of chromatin interaction (Chicago score (-log p-value), Mustache (q-value)) for loops found in both promoter capture Micro-C and Micro-C (shared) and only one data is plotted. A mean value in shown in red. A median value is shown in blue.
 
