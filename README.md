@@ -273,7 +273,11 @@ PLEASE NOTED that if you want to add tracks based on your need, the additional `
 ## Figure4 Regulatory elements and nucleosome-depleted regions (NDRs) that are involved in loops.
 
 This figure is about the regulatory elements (Promoter, Enhancer, Insulator, NDR, repressed regions etc.) involved in loops. We used ChIP-seq data of histone marks (Promoter - H3K4me3, Enhancer - H3K27ac, Repressed - H2K27me3 etc.) as well as CTCF to identify these regions. We processed ChIP-seq data based on the pipeline from ENCODE. Please check https://www.encodeproject.org/chip-seq/histone/
-### 4A. Genome browser screenshots of ChIP-seq, NOMe-seq, Hi-C, Micro-C, and RefSeq Genes. 4B. Fractions of regulatory elements that intersect with loop anchors identified from Hi-C 1 billion, Micro-C 1 billion, 2 billion, and 3 billion data. 4C. Numbers of loops belong to different loop categories defined by intersecting the loop anchors with different types of regulatory elements
+### 4A. Genome browser screenshots of ChIP-seq, NOMe-seq, Hi-C, Micro-C, and RefSeq Genes.
+
+### 4B. Fractions of regulatory elements that intersect with loop anchors identified from Hi-C 1 billion, Micro-C 1 billion, 2 billion, and 3 billion data. 
+
+### 4C. Numbers of loops belong to different loop categories defined by intersecting the loop anchors with different types of regulatory elements
 
 We used an Rscript ```Loop_Rep_overlapAnalysis.R``` to perform the genomic regulatory element distribution analysis for loop data. See below instruction if you are interested to use this script.
 
@@ -367,7 +371,9 @@ Rscript t_test_4deeptools.R /PATH/TO/inloop.RPKM.gz /PATH/TO/notinloop.RPKM.gz
 ```
 It will print out the t-test result.
 
-### 6B. Average chromatin accessibility levels (%) of active promoters, enhancers, insulators, and NDRs without features that are in loop (black) vs those that are not in loop (orange) are shown. 6C. Average DNA methylation levels of active promoters, enhancers, insulators, and NDRs without features that are in loop (black) vs those that are not in loop (orange) are shown.
+### 6B. Average chromatin accessibility levels (%) of active promoters, enhancers, insulators, and NDRs without features that are in loop (black) vs those that are not in loop (orange) are shown. 
+
+### 6C. Average DNA methylation levels of active promoters, enhancers, insulators, and NDRs without features that are in loop (black) vs those that are not in loop (orange) are shown.
 
 Panel C and D are generated using Bistools (Lay et al, 2015). Here we provide our example code to run Bistools. Basically, we used bistools to visualize NOMe-seq signal around interested sites (e.g. promoter, enhancer, insulator etc.) in density plot, average plot and heatmap.  To make these graphs, the necessary input files are the ```HCG.bw``` and ```GCH.bw```, which are generated from NOMe-seq data using Bis-SNP ([Liu et al. 2012](https://genomebiology.biomedcentral.com/articles/10.1186/gb-2012-13-7-r61)), as well as a ```.bed``` file (e.g. Histong Modification or CTCF narrowPeak file) which is used to specify the regions that you want to plot the signals on.
 
