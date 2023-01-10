@@ -1,6 +1,6 @@
 # 3Dgenome
 
-##Lee, B.H., Wu, Z. & Rhie, S.K. Characterizing chromatin interactions of regulatory elements and nucleosome positions, using Hi-C, Micro-C, and promoter capture Micro-C. Epigenetics & Chromatin 15, 41 (2022). https://doi.org/10.1186/s13072-022-00473-4
+## Lee, B.H., Wu, Z. & Rhie, S.K. Characterizing chromatin interactions of regulatory elements and nucleosome positions, using Hi-C, Micro-C, and promoter capture Micro-C. Epigenetics & Chromatin 15, 41 (2022). https://doi.org/10.1186/s13072-022-00473-4
 #Beoung Hun Lee, Zexun Wu, Sunh Kyong Rhie
 
 Here we describe the script/data type we used for each main figure.
