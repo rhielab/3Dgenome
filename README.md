@@ -3,7 +3,7 @@
 ## Lee, B.H., Wu, Z. & Rhie, S.K. Characterizing chromatin interactions of regulatory elements and nucleosome positions, using Hi-C, Micro-C, and promoter capture Micro-C. Epigenetics & Chromatin 15, 41 (2022). https://doi.org/10.1186/s13072-022-00473-4
 #Beoung Hun Lee, Zexun Wu, Sunh Kyong Rhie
 
-Here we describe the scripts/data type we used for each main figure. All the scripts described below are provided in 
+Here we describe the scripts/data type we used for each main figure. All the scripts described below are provided in [/script_new](https://github.com/rhielab/3Dgenome/tree/main/script_new).
 
 Please noted that we process our Micro-C, Hi-C, Capture Micro-C data based on 4DN Hi-C data processing pipeline (https://data.4dnucleome.org/resources/data-analysis/hi_c-processing-pipeline) to get the all the necessary files .hic, .bam, .cool, .mcool required for different downstream softwares. If you are insterested to use any script here, pelase make sure you have the correct format of input files.
 
