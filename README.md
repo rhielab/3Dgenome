@@ -1,4 +1,4 @@
-*__Rhie Lab - 3D genome project__*
+##*__Rhie Lab - 3D genome project__*##
 
 ## Citation
 Lee, B.H., Wu, Z. & Rhie, S.K. Characterizing chromatin interactions of regulatory elements and nucleosome positions, using Hi-C, Micro-C, and promoter capture Micro-C. Epigenetics & Chromatin 2022 Dec 21;15(1):41. https://doi.org/10.1186/s13072-022-00473-4 PMID: 36544209
