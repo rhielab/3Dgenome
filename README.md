@@ -9,7 +9,7 @@ All of Hi-C, Micro-C, Capture Micro-C, ChIP-seq, NOMe-seq, and RNA-seq datasets 
 ## Analysis
 Here we describe the analysis method we used to generate main figures of the above manuscript (PMID: 36544209). 
 
-We processed Micro-C, Hi-C, Capture Micro-C data based on 4DN Hi-C data processing pipeline (https://data.4dnucleome.org/resources/data-analysis/hi_c-processing-pipeline) to get all of the necessary files .hic, .bam, .cool, .mcool required for different downstream softwares.
+We processed Hi-C, Micro-C, and Capture Micro-C data using the 4DN Hi-C data processing pipeline (https://data.4dnucleome.org/resources/data-analysis/hi_c-processing-pipeline) to get all of the necessary files .hic, .bam, .cool, .mcool required for different downstream softwares.
 
 We processed ChIP-seq data using the ENCODE ChIP-seq pipeline (https://www.encodeproject.org/chip-seq/histone/) to annnotate regulatory elements (Promoter, Enhancer, Insulator, NDR, Repressed Regions etc.) 
 
