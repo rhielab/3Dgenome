@@ -3,14 +3,19 @@
 ## Citation
 Lee, B.H., Wu, Z. & Rhie, S.K. Characterizing chromatin interactions of regulatory elements and nucleosome positions, using Hi-C, Micro-C, and promoter capture Micro-C. Epigenetics & Chromatin 2022 Dec 21;15(1):41. https://doi.org/10.1186/s13072-022-00473-4 PMID: 36544209
 
-##
-Here we describe the scripts/data type we used for each main figure. All the scripts described below are provided in [/script_new](https://github.com/rhielab/3Dgenome/tree/main/script_new).
+## Datasets
+All of Hi-C, Micro-C, Capture Micro-C, ChIP-seq, NOMe-seq, and RNA-seq datasets used for the above study can be found from the GEO GSE205000 https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE205000
 
-Please noted that we process our Micro-C, Hi-C, Capture Micro-C data based on 4DN Hi-C data processing pipeline (https://data.4dnucleome.org/resources/data-analysis/hi_c-processing-pipeline) to get the all the necessary files .hic, .bam, .cool, .mcool required for different downstream softwares. If you are insterested to use any script here, pelase make sure you have the correct format of input files.
+## Analysis
+Here we describe the analysis method we used to generate main figures of the above manuscript (PMID: 36544209). 
 
-We processed the publically available ChIP-seq data achieved from GEO and ENCODE to recognize different regulatory elements (Promoter, Enhancer, Insulator, NDR, Repressed Regions etc.) in C42B. For ChIP-seq data, we processed them based on the pipeline from ENCODE. Please check https://www.encodeproject.org/chip-seq/histone/
+We processed Micro-C, Hi-C, Capture Micro-C data based on 4DN Hi-C data processing pipeline (https://data.4dnucleome.org/resources/data-analysis/hi_c-processing-pipeline) to get all of the necessary files .hic, .bam, .cool, .mcool required for different downstream softwares.
 
-For NOMe-seq, we got the C42B NOMe-seq data from previous study (Rhie et al., 2018). For NOMe-seq data processing, we used BSMAP (Xi and Li 2009) to align .fastq file to bisulfile-converted genome and Bis-SNP (Liu et al. 2012) to identify meethylation status of CpG and GpC sites from BAM file.
+We processed ChIP-seq data using the ENCODE ChIP-seq pipeline (https://www.encodeproject.org/chip-seq/histone/) to annnotate regulatory elements (Promoter, Enhancer, Insulator, NDR, Repressed Regions etc.) 
+
+We processed NOMe-seq data using BSMAP (Xi and Li 2009) to align .fastq file to bisulfile-converted genome and Bis-SNP (Liu et al. 2012) to identify meethylation status of CpG and GpC sites from BAM file.
+
+All of the in-house scripts used can be found from [/script_new](https://github.com/rhielab/3Dgenome/tree/main/script_new).
 
 ## Figure1 Comparison of Hi-C and Micro-C data.
 ### 1A. Experimental methods of Hi-C and Micro-C. Unlike Hi-C that uses restriction enzyme, Micro-C uses MNase, allowing to fragment chromatin to mono, di-, and tri-nucleosomes. 
