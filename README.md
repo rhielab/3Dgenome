@@ -172,12 +172,6 @@ Outputs include a bunch of ```.bedpe``` files for loops falling into specific ca
 ### 2D. Numbers of loops shared (between any datasets) or unique among Hi-C 1 billion, Micro-C 1 billion, 2 billion, and 3 billion data
 
 We used an Rscript ```Loop_comparison.R``` to run loop intersection analysis between two libraries, using a list of loop data as the input. 
-
-The output files in the output folder include:
-- All the original loop data added with comparison 0/1 matrix.
-- For each loop data, output a subforder containning the shared/unique loop data
-- Summary table for the loop comparison.
-
 See below code for usage instruction:
 
 Load the function. To run it, make sure you have ```fuzzyjoin``` and ```dplyr``` libraries in your R environment:
@@ -219,6 +213,11 @@ priority = c(4,3,2,1)
 output_path= './output2'
 )
 ```
+
+The output files in the output folder include:
+- All the original loop data added with comparison 0/1 matrix.
+- For each loop data, output a subforder containning the shared/unique loop data
+- Summary table for the loop comparison.
 
 ## Figure 3 Chromatin loops near structural variants
 
