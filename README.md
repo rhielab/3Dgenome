@@ -230,10 +230,6 @@ output_path= './output2'
 
 ### 3A. Numbers of inter and intra-chromosomal structural variants identified from Hi-C and Micro-C data
 
-### 3B. Numbers of each category of structural variants identified from Hi-C and Micro-C data
-
-### 3C. Numbers of loops identified around the structural variants from Hi-C and Micro-C data
-
 We used NeoLoopFinder (Wang et al., 2021) to identify loops near the structural variants using Hi-C and Micro-C data. As the figures are showing the stats number from NeoLoopFinder, here we explain our code and relevant scripts to run NeoLoopFinder. To start with, we first runed hic_breakfinder (https://github.com/dixonlab/hic_breakfinder) to identify the structural variants. 
 
 The necessary input files for hic_breakfinder are ```.bam``` as well as the intra and inter chromosomal expectation file. Here we used ```inter_expect_1Mb.hg38.txt``` and ```intra_expect_100kb.hg38.txt```, which are provided by hic_breakfinder and can be found at https://salkinstitute.box.com/s/m8oyv2ypf8o3kcdsybzcmrpg032xnrgx.
@@ -280,9 +276,17 @@ neoloop-caller \
 ```
 The loops identified near structural variants are save in ```neo-loops.txt```. 
 
+### 3B. Numbers of each category of structural variants identified from Hi-C and Micro-C data
+
+Please refer to 3A. Structtural variants are called in ```sv.txt``` files.
+
+### 3C. Numbers of loops identified around the structural variants from Hi-C and Micro-C data
+
+Please refer to 3A. Loops are derived in ```neo-loops.txt``` file.
+
 ### 3D. Numbers of neoloops that are shared or unique among Hi-C 1 billion, Micro-C 1 billion, 2 billion and 3 billion
 
-Here is the loop-comparison analysis, we used the same script as desribed in figure2D
+Here is the loop-comparison analysis, we used the same comparison method as desribed in figure2D with ```neo-loops.txt``` as inputs.
 
 ### 3E. An example heatmap of Micro-C data near the ARID1A gene that includes an inversion structural variant
 
