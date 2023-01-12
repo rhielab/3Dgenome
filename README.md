@@ -17,7 +17,7 @@ We processed Hi-C, Micro-C, and Capture Micro-C data using the 4DN Hi-C data pro
 
 We processed ChIP-seq data using the ENCODE ChIP-seq pipeline (https://www.encodeproject.org/chip-seq/histone/) to annnotate regulatory elements (Promoter, Enhancer, Insulator, NDR, Repressed Regions etc.) 
 
-We processed NOMe-seq data using BSMAP (Xi and Li 2009 PMID:XXXX) to align .fastq file to bisulfile-converted genome and Bis-SNP (Liu et al., Genome Biol,2012 PMID:22784381) to identify meethylation status of CpG and GpC sites from BAM file.
+We processed NOMe-seq data using BSMAP (Xi and Li, BMC Bioinformatics, 2009, PMID:19635165) to align .fastq file to bisulfile-converted genome and Bis-SNP (Liu et al., Genome Biol,2012 PMID:22784381) to identify meethylation status of CpG and GpC sites from BAM file.
 
 ## Figure 1. Comparison of Hi-C and Micro-C data
 ### 1A. Experimental methods of Hi-C and Micro-C 
