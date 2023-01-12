@@ -9,7 +9,9 @@ All of Hi-C, Micro-C, Capture Micro-C, ChIP-seq, NOMe-seq, and RNA-seq datasets 
 ## Analysis
 Here we describe the analysis method we used to generate main figures of the above manuscript (PMID: 36544209). 
 
-All of the in-house scripts used can be found from [/script_new](https://github.com/rhielab/3Dgenome/tree/main/script_new). If you use in-house datasets and scripts for your manuscript, please cite the above manuscript (PMID: 36544209). 
+All of the in-house scripts used can be found from [/script_new](https://github.com/rhielab/3Dgenome/tree/main/script_new). 
+
+If you use in-house datasets and scripts for your manuscript, ## please cite the above manuscript (PMID: 36544209). 
 
 We processed Hi-C, Micro-C, and Capture Micro-C data using the 4DN Hi-C data processing pipeline (https://data.4dnucleome.org/resources/data-analysis/hi_c-processing-pipeline) to get all of the necessary files .hic, .bam, .cool, .mcool required for different downstream softwares.
 
