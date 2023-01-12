@@ -310,7 +310,7 @@ For more detailed instruction about NeoLoopFinder, please refer to https://githu
 
 ### 4A. Genome browser screenshots of ChIP-seq, NOMe-seq, Hi-C, Micro-C, and RefSeq Genes
 
-This panel is generated using The [Integrative Genomics Viewer (IGV)](https://software.broadinstitute.org/software/igv).
+This panel is generated using [The Integrative Genomics Viewer (IGV)](https://software.broadinstitute.org/software/igv).
 
 ### 4B. Fractions of regulatory elements that intersect with loop anchors identified from Hi-C 1 billion, Micro-C 1 billion, 2 billion, and 3 billion data 
 
