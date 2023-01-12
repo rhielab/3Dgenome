@@ -63,33 +63,6 @@ The output is a list containing four tables. The first table is the overlapped T
 head(final)
 ```
 
-To run TopDom, the required input is ```.hic``` file. Below is the example code we used:
-
-First, generate sparse matrix format ending with bp.txt files using python script.
-
-- The 1st input is the path to hic file.
-- The 2nd input is the resolution, here we choose 50KB. Please specify this option according to your need.
-- The 3rd input is the prefix for the output
-```
-python HiC_to_TopDom_format.py \
-EXAMPLE.hic \
-50000 \
-output_prefix
-```
-
-And then generate topdom output
-- The 1st input is the prefix
-- The 2nd input is the resolution, here we choose 50KB. Please specify this option according to your need.
-```
-Rscript run_TopDom.R \
-2_Billion \
-50000
-```
-
-Combine topdom output and produce final output topdom bed file with domain information
-```
-tail -n +2 *topdom.bed | grep -v '==>' > EXAMPLE-topdom.bed
-```
 For more usage instruction for TopDom, please refer to github page: https://github.com/HenrikBengtsson/TopDom.
 
 ### 1D. Triangular heatmaps of Hi-C and Micro-C near chr1p32 region
@@ -156,7 +129,7 @@ mustache -f EXAMPLE.hic \
 done
 ```
 
-For more usage instruction for Mustache, please refer to https://github.com/ay-lab/mustache. 
+For more usage instruction for Mustache, please refer to [here](https://github.com/ay-lab/mustache). 
 
 ### 2C. Fractions of loops that have different lengths (distances) found from Hi-C 1 billion, Micro-C 1 billion, 2 billion, and 3 billion data
 
@@ -225,55 +198,11 @@ The output files in the output folder include:
 
 ### 3A. Numbers of inter and intra-chromosomal structural variants identified from Hi-C and Micro-C data
 
-We used hic_breakfinder (https://github.com/dixonlab/hic_breakfinder, PMID:XXXX) to identify the structural variants.
+We used hic_breakfinder (https://github.com/dixonlab/hic_breakfinder, PMID:XXXX) to identify the structural variants. 
 
-We used NeoLoopFinder (Wang et al., 2021, PMID:XXXXX) to identify loops near the structural variants using Hi-C and Micro-C data. 
+We used NeoLoopFinder (https://github.com/XiaoTaoWang/NeoLoopFinder, Wang et al., 2021, PMID:XXXXX) to identify loops near the structural variants using Hi-C and Micro-C data. 
 
-As the figures are showing the stats number from NeoLoopFinder, here we explain our code and relevant scripts to run NeoLoopFinder. To start with, we first run hic_breakfinder (https://github.com/dixonlab/hic_breakfinder, PMID:XXXX) to identify the structural variants. 
-
-The necessary input files for hic_breakfinder are ```.bam``` as well as the intra and inter chromosomal expectation file. Here we used ```inter_expect_1Mb.hg38.txt``` and ```intra_expect_100kb.hg38.txt```, which are provided by hic_breakfinder and can be found at [here](https://salkinstitute.box.com/s/m8oyv2ypf8o3kcdsybzcmrpg032xnrgx).
-
-The example code to run hic_breakfinder:
-```
-hic_breakfinder \
---bam-file input.bam \ 
---exp-file-inter inter_expect_1Mb.hg38.txt \
---exp-file-intra intra_expect_100kb.hg38.txt \
---name OutputPrefix
-```
-
-We then used [prepare-SV-breakpoints.py](https://github.com/XiaoTaoWang/NeoLoopFinder/blob/master/scripts/prepare-SV-breakpoints.py) from [NeoLoopFinder GitHub](https://github.com/XiaoTaoWang/NeoLoopFinder) to convert the ```breaks.txt``` to ```sv.txt``` which is used as the input for NeoLoopFinder.
-```
-python prepare-SV-breakpoints.py \
-OutputPrefix.breaks.txt \
-OutputPrefix.sv.txt
-```
-
-And then we can run NeoLoopFinder. The necessary input file include ```.cool``` and the newly generated ```sv.txt```. 
-
-Based on the instruction, need to first run ```cooler balance```.
-```
-cooler balance -p 1 EXAMPLE.cool
-```
-Noted that it is also required to run ```calculate-cnv```, ```segment-cnv``` and ```correct-cnv```. However, these functions didn't work with our Micro-C data so we skip these steps and just run ```assemble-complexSVs```:
-```
-assemble-complexSVs \
--O OutputPrefix \
--B OutputPrefix.sv.txt \
--H EXAMPLE.cool \
---balance-type ICE
-```
-This step will create a ```assemblies.txt``` which contains the structural variant events and also serves as the input for ```neoloop-caller```:
-```
-neoloop-caller \
--O OutputPrefix.neo-loops.txt \
--H EXAMPLE.cool \
---assembly OutputPrefix.assemblies.txt \
---no-clustering \
---prob 0.95 \
---balance-type ICE
-```
-The loops identified near structural variants are save in ```neo-loops.txt```. 
+Please refere their github page for detailed instructions.
 
 ### 3B. Numbers of each category of structural variants identified from Hi-C and Micro-C data
 
@@ -300,8 +229,7 @@ FromNeoLoopFinder.neo-loops.txt \
 ./output/ \
 Outputprefix
 ```
-
-To plot with RNA-seq track, ```.bigwig``` file was added in line 23 and 24 of the ```plotting_NEOheatmap.py```.
+To plot with RNA-seq track, ```.bigwig``` file can be added in line 23 and 24 of the ```plotting_NEOheatmap.py```.
 
 ## Figure 4 Regulatory elements and nucleosome-depleted regions (NDRs) that are involved in loops
 
@@ -386,23 +314,9 @@ We used the same script ```Loop_Rep_overlapAnalysis.R``` as described in Figure 
 
 ### 6A. Average Micro-C signals around active promoters, enhancers, insulators, and NDRs without features that are in loop vs those that are not in loop
 
-The signal plots are generated using DeepTools (Ramírez et al, 2014, PMID:XXXX). The input files used are ```.bigwig``` as well as the ```.bed``` files for regulatory elements (e.g promoter, enhancer, insulator, NDR). Please refer to https://deeptools.readthedocs.io/en/develop/ for more information. Below is our example code ro run DeepTools:
+The signal plots are generated using DeepTools (Ramírez et al, 2014, PMID:XXXX). The input files used are ```.bigwig``` as well as the ```.bed``` files for regulatory elements (e.g promoter, enhancer, insulator, NDR). Please refer to https://deeptools.readthedocs.io/en/develop/ for more information.
 
-```
-computeMatrix reference-point --referencePoint center \
--b 1000 -a 1000 \
--S input.bigwig \
--R RegulatoryElement.bed \
--p 16 \
--o output.RPKM.gz
-```
-The output ```RPKM.gz``` is necessary for ```plotHeatmap``` function
-```
-plotHeatmap \
--m output.RPKM.gz \
--o output.pdf
-```
-We used an Rscript ```t_test_4deeptools.R``` to perform t-test at the center of the signal between in-loop and not in-loop data.
+We used an Rscript ```t_test_4deeptools.R``` to perform t-test at the center of the signal between in-loop and not in-loop data. The ```RPKM.gz``` files were generated from DeepTools.
 
 ```
 Rscript t_test_4deeptools.R /PATH/TO/inloop.RPKM.gz /PATH/TO/notinloop.RPKM.gz
@@ -412,46 +326,6 @@ Rscript t_test_4deeptools.R /PATH/TO/inloop.RPKM.gz /PATH/TO/notinloop.RPKM.gz
 
 This panel plots were generated using Bis-tools (Lay et al, 2015, PMID: XXXX). Please refer this github page for more usage instruction of Bis-tools (https://github.com/dnaase/Bis-tools, PMID: XXX).
 To make these graphs, the necessary input files, which are the ```HCG.bw```(DNA methylation) and ```GCH.bw```(chromatin accessibility), are generated from NOMe-seq data using Bis-SNP ([Liu et al. 2012](https://genomebiology.biomedcentral.com/articles/10.1186/gb-2012-13-7-r61), PMID: XXX).
-
-To generate average plot:
-```
-perl alignWigToBed.pl \
-HCG.bw GCH.bw \
---locs /PATH/TO/BED \
---average \
---prefixs output_prefix \
---plot_x_axis_scale 1000 \
---data_matrix_scale 1200 \
---bin_size 20 \
---bin_size_align 1 \
---plot_x_axis_scale 1000 \
---result_dir /path/to/outputfolder \
---smooth \
---colors black --colors green \
---lengends HCG.bw --lengends GCH.bw
-```
-
-To genreate heatmap, please noted that the ```shortName``` should be any features that describe your selected bed files (e.g Regulatory elements or Histone Marks):
-```
-perl alignWigToBed.DKO_paper_version.pl \
---prefixs output_prefix \
---heatmap_with_reps \
---data_matrix_scale 1200 \
---bin_size 20 --bin_size_align 1 \
---plot_x_axis_scale 1000 \
---result_dir /path/to/outputfolder \
---locs /PATH/TO/BED \
---category_names shortName \
---experiment_names Methylation  \
---experiment_names Accessibility \
---experiment_names Methylation2  \
---experiment_names Accessibility2  \
---heatmap_col blue2yellow --heatmap_col white2darkgreen --heatmap_col blue2yellow --heatmap_col white2darkgreen \
---heatmap_regionToCluster_low -500 --heatmap_regionToCluster_high 500 \
---heatmap_cluster 2 \
---multiSampleClustering 4 \
-Twosamples.txt
-```
 
 ### 6C. Average DNA methylation levels of active promoters, enhancers, insulators, and NDRs without features that are in loop vs those that are not in loop 
 
