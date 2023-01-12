@@ -460,4 +460,4 @@ Please refer this github page for more usage instruction of Bis-tools (https://g
 
 ### 6C. Average DNA methylation levels of active promoters, enhancers, insulators, and NDRs without features that are in loop vs those that are not in loop 
 
-Please refer to 6B for the analysis.
+Please refer to 6B for the visualization of DNA methylation signals.
