@@ -56,7 +56,7 @@ final <- topdom_comparison(topdom_bed1 = data1, topdom_bed2 = data2,
  label_1='C42B.1B', label_2 = 'C42B.HiC', resolution = 50000)
 ```
 
-The output is a list containing four tables. The first table is the overlapped TADs in bed1; second table is the overlapped TADs in bed2; third table is the bed1 with comparison matrix; fourth table is bed2 with comparison matrix. To check:
+The output is a list containing four tables. The first table is the overlapped TADs in bed1; second table is the overlapped TADs in bed2; third table is the bed1 with comparison 0/1 matrix; fourth table is bed2 with comparison 0/1 matrix. To check:
 ```
 head(final)
 ```
@@ -414,7 +414,7 @@ It will print out the t-test result.
 
 ### 6B. Average chromatin accessibility levels (%) of active promoters, enhancers, insulators, and NDRs without features that are in loop vs those that are not in loop 
 
-This panel are generated using Bistools (Lay et al, 2015). Here we provide our example code to run Bistools. Basically, we used bistools to visualize NOMe-seq signal around interested sites (e.g. promoter, enhancer, insulator etc.) in density plot, average plot and heatmap.  To make these graphs, the necessary input files are the ```HCG.bw```(DNA methylation) and ```GCH.bw```(chromatin accessibility), which are generated from NOMe-seq data using Bis-SNP ([Liu et al. 2012](https://genomebiology.biomedcentral.com/articles/10.1186/gb-2012-13-7-r61)), as well as a ```.bed``` file (e.g. Histong Modification or CTCF narrowPeak file) which is used to specify the regions that you want to plot the signals on.
+This panel are generated using Bistools (Lay et al, 2015). Here we provide our example code to run Bistools. Basically, we used bistools to visualize NOMe-seq signal around interested sites (e.g. promoter, enhancer, insulator etc.) in density plot, average plot and heatmap.  To make these graphs, the necessary input files are the ```HCG.bw```(DNA methylation) and ```GCH.bw```(chromatin accessibility), which are generated from NOMe-seq data using Bis-SNP ([Liu et al. 2012](https://genomebiology.biomedcentral.com/articles/10.1186/gb-2012-13-7-r61)), as well as a ```.bed``` file (e.g. Histong Modification or CTCF narrowPeak file) which is used to specify the regions where you want to plot the signals.
 
 To generate average plot:
 ```
