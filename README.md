@@ -314,7 +314,7 @@ We used the same script ```Loop_Rep_overlapAnalysis.R``` as described in Figure 
 
 ### 6A. Average Micro-C signals around active promoters, enhancers, insulators, and NDRs without features that are in loop vs those that are not in loop
 
-The signal plots are generated using DeepTools (Ramírez et al, 2014, PMID:XXXX). The input files used are ```.bigwig``` as well as the ```.bed``` files for regulatory elements (e.g promoter, enhancer, insulator, NDR). Please refer to https://deeptools.readthedocs.io/en/develop/ for more information.
+The signal plots are generated using DeepTools (Ramírez et al, 2014, PMID:XXXX). The input files used are ```.bigwig``` as well as the ```.bed``` files for regulatory elements (e.g promoter, enhancer, insulator, NDR). Please refer to [here](https://deeptools.readthedocs.io/en/develop/) for more information.
 
 We used an Rscript ```t_test_4deeptools.R``` to perform t-test at the center of the signal between in-loop and not in-loop data. The ```RPKM.gz``` files were generated from DeepTools.
 
