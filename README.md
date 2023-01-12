@@ -224,9 +224,10 @@ The output files in the output folder include:
 ### 3A. Numbers of inter and intra-chromosomal structural variants identified from Hi-C and Micro-C data
 
 We used hic_breakfinder (https://github.com/dixonlab/hic_breakfinder, PMID:XXXX) to identify the structural variants.
+
 We used NeoLoopFinder (Wang et al., 2021, PMID:XXXXX) to identify loops near the structural variants using Hi-C and Micro-C data. 
 
-As the figures are showing the stats number from NeoLoopFinder, here we explain our code and relevant scripts to run NeoLoopFinder. To start with, we first runed hic_breakfinder (https://github.com/dixonlab/hic_breakfinder, PMID:XXXX) to identify the structural variants. 
+As the figures are showing the stats number from NeoLoopFinder, here we explain our code and relevant scripts to run NeoLoopFinder. To start with, we first run hic_breakfinder (https://github.com/dixonlab/hic_breakfinder, PMID:XXXX) to identify the structural variants. 
 
 The necessary input files for hic_breakfinder are ```.bam``` as well as the intra and inter chromosomal expectation file. Here we used ```inter_expect_1Mb.hg38.txt``` and ```intra_expect_100kb.hg38.txt```, which are provided by hic_breakfinder and can be found at [here](https://salkinstitute.box.com/s/m8oyv2ypf8o3kcdsybzcmrpg032xnrgx).
 
