@@ -162,17 +162,11 @@ We used a bash script ```category_loop_distance.sh``` to classify a specific loo
 
 ```
 bash category_loop_distance.sh \
-/PATH/TO/LOOPDATA
-```
-
-The deafault output path is your current working directory. You can also specify the output path:
-
-```
-bash category_loop_distance.sh \
 /PATH/TO/LOOPDATA \
 OUTPUT_PATH
 ```
 
+The default output folder path is your current working directory if you do not specify the output folder path. 
 Outputs include a bunch of ```.bedpe``` files for loops falling into specific category, along with a ```summary.txt``` where the number and fraction of loops detected in different categoires are shown.
 
 ### 2D. Numbers of loops shared (between any datasets) or unique among Hi-C 1 billion, Micro-C 1 billion, 2 billion, and 3 billion data
