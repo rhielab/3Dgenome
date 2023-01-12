@@ -282,7 +282,7 @@ Please refer to 3A. Structtural variants are called in ```sv.txt``` files.
 
 ### 3C. Numbers of loops identified around the structural variants from Hi-C and Micro-C data
 
-Please refer to 3A. Loops are derived in ```neo-loops.txt``` file.
+Please refer to 3A. Loops are called in ```neo-loops.txt``` file.
 
 ### 3D. Numbers of neoloops that are shared or unique among Hi-C 1 billion, Micro-C 1 billion, 2 billion and 3 billion
 
