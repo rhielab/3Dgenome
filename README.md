@@ -15,13 +15,13 @@ We processed ChIP-seq data using the ENCODE ChIP-seq pipeline (https://www.encod
 
 We processed NOMe-seq data using BSMAP (Xi and Li 2009) to align .fastq file to bisulfile-converted genome and Bis-SNP (Liu et al. 2012) to identify meethylation status of CpG and GpC sites from BAM file.
 
-All of the in-house scripts used can be found from [/script_new](https://github.com/rhielab/3Dgenome/tree/main/script_new).
+All of the in-house scripts used can be found from [/script_new](https://github.com/rhielab/3Dgenome/tree/main/script_new). If you use in-house datasets and scripts for your manuscript, please cite the above manuscript (PMID: 36544209). 
 
-## Figure1 Comparison of Hi-C and Micro-C data.
-### 1A. Experimental methods of Hi-C and Micro-C. Unlike Hi-C that uses restriction enzyme, Micro-C uses MNase, allowing to fragment chromatin to mono, di-, and tri-nucleosomes. 
+## Figure 1. Comparison of Hi-C and Micro-C data
+### 1A. Experimental methods of Hi-C and Micro-C 
 
-### 1B. Chromatin interaction heatmaps of Hi-C and Micro-C data near chr7p14 region.
-We used cooltools (https://github.com/open2c/cooltools) to generate the interaction heatmap. Here we provide a python script ```cooltools_heatmap.py``` to run cooltools. The required input to generate this plot is ```.mcool``` file. Below is the example code:
+### 1B. Chromatin interaction heatmaps of Hi-C and Micro-C data
+We used cooltools (https://github.com/open2c/cooltools) to generate the interaction heatmap. We used a Python script ```cooltools_heatmap.py``` to run cooltools. The required input file to generate this plot is ```.mcool``` file. Below is the example code:
 
 To run the script, please make sure that you have installed cooltools correctly. 
 - 1st - mcool file
