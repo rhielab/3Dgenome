@@ -275,19 +275,19 @@ The loops identified near structural variants are save in ```neo-loops.txt```.
 
 ### 3B. Numbers of each category of structural variants identified from Hi-C and Micro-C data
 
-Please refer to 3A. Structtural variants are called in ```sv.txt``` files.
+Please refer to 3A. 
 
 ### 3C. Numbers of loops identified around the structural variants from Hi-C and Micro-C data
 
-Please refer to 3A. Loops are called in ```neo-loops.txt``` file.
+Please refer to 3A. 
 
 ### 3D. Numbers of neoloops that are shared or unique among Hi-C 1 billion, Micro-C 1 billion, 2 billion and 3 billion
 
-Here is the loop-comparison analysis, we used the same comparison method as desribed in figure2D with ```neo-loops.txt``` as inputs.
+Here is the loop-comparison analysis, we used the same comparison method as desribed in Figure 2D.
 
 ### 3E. An example heatmap of Micro-C data near the ARID1A gene that includes an inversion structural variant
 
-We used a python script ```plotting_NEOheatmap.py``` to generate the heatmap together with multipe tracks of data. The necessary input to run this script include ```.cool``` with additional ```assemblies.txt``` and ```neo-loops.txt```, which are generate from NeoLoopFinder (Wang et al., 2021). Please refert to figure3A for more details on how to generate these two files.
+We used a python script ```plotting_NEOheatmap.py``` to generate the heatmap together with multipe tracks of data. The necessary input to run this script include ```.cool``` with additional ```assemblies.txt``` and ```neo-loops.txt```, which are generate from NeoLoopFinder (Wang et al., 2021, PMID:XXXX). 
 
 Below is an example code:
 ```
@@ -299,15 +299,13 @@ FromNeoLoopFinder.neo-loops.txt \
 Outputprefix
 ```
 
-PLEASE NOTED that if you want to add tracks based on your need, the additional ```.bigwig``` files are needed and in this case you need to modify ```plotting_NEOheatmap.py``` by yourself (see line 23 and 24). 
-
-For more detailed instruction about NeoLoopFinder, please refer to https://github.com/XiaoTaoWang/NeoLoopFinder (PMID:XXX).
+To plot with RNA-seq track, ```.bigwig``` file was added in line 23 and 24 of the ```plotting_NEOheatmap.py```.
 
 ## Figure 4 Regulatory elements and nucleosome-depleted regions (NDRs) that are involved in loops
 
 ### 4A. Genome browser screenshots of ChIP-seq, NOMe-seq, Hi-C, Micro-C, and RefSeq Genes
 
-This panel is generated using [The Integrative Genomics Viewer (IGV)](https://software.broadinstitute.org/software/igv).
+This panel is generated using ```.bigwig``` files with [The Integrative Genomics Viewer (IGV)](https://software.broadinstitute.org/software/igv).
 
 ### 4B. Fractions of regulatory elements that intersect with loop anchors identified from Hi-C 1 billion, Micro-C 1 billion, 2 billion, and 3 billion data 
 
@@ -360,7 +358,7 @@ Please refer to 4C for the analysis to identify promoter-enhancer loops.
 
 ### 4E. Significance of chromatin interaction (q-value identified by Mustache) for top 5 loop categories
 
-Here we show an example Rscript ```plot_average_q_value.R``` to generate the q-value violin plot of different chromatin interactions. Please noted that the input ```.tsv``` files are generated from the ```Loop_Rep_overlapAnalysis.R``` Rscript as described above.
+Here we show an example Rscript ```plot_average_q_value.R``` which we used to generate the q-value violin plot of different chromatin interactions. Please note that the input ```.tsv``` files are generated from the ```Loop_Rep_overlapAnalysis.R``` script as described above.
 
 ## Figure 5 Promoter capture Micro-C data analysis 
 
@@ -368,26 +366,25 @@ Here we show an example Rscript ```plot_average_q_value.R``` to generate the q-v
 
 ### 5B. Chromatin interaction heatmaps of Micro-C and promoter capture Micro-C data near chr1q41 region
 
-We used cooltools to generate the chromaitn interaction heatmap. We used the same script ```cooltools_heatmap.py``` as described in figure1.
+We used cooltools (github page, PMID: XXXX) to generate the chromaitn interaction heatmap. We used the same script ```cooltools_heatmap.py``` as described in figure1.
 
 ### 5C. Significance of chromatin interaction for loops found in both promoter capture Micro-C and Micro-C (shared) and only one data 
 
-We used the same script ```plot_average_q_value.R``` as described in figure4 for violin plot generation.
+We used the same script ```plot_average_q_value.R``` as described in Figure 4E to generate a violin plot.
 
 ### 5D. Fractions of active promoters that intersect with the loop anchors from Micro-C 1 billion, 2 billion, 3 billion data or promoter capture Micro-C data
 
-Please refer to 4B for the analysis.
+Please refer to Figure 4B for the analysis.
 
 ### 5E. Numbers of loops and loop categories identified from promoter capture Micro-C data
 
-The analysis is bacially the stats from the regulatory elements distribution analysis among promoter capture Micro-C libraries. We used the same script ```Loop_Rep_overlapAnalysis.R``` as described in figure4.
-
+We used the same script ```Loop_Rep_overlapAnalysis.R``` as described in Figure 4C.
 
 ## Figure 6 Nucleosome phasing and DNA methylation levels around regulatory elements involved in loops
 
 ### 6A. Average Micro-C signals around active promoters, enhancers, insulators, and NDRs without features that are in loop vs those that are not in loop
 
-The signal plots are generated using DeepTools (Ramírez et al, 2014). The necessary input file is ```.bigwig``` as well as the ```.bed``` files for different regulatory elements (e.g promoter, enhancer, insulator, NDR). Please refer to https://deeptools.readthedocs.io/en/develop/ for more information. Below is our example code ro run DeepTools:
+The signal plots are generated using DeepTools (Ramírez et al, 2014, PMID:XXXX). The input files used are ```.bigwig``` as well as the ```.bed``` files for regulatory elements (e.g promoter, enhancer, insulator, NDR). Please refer to https://deeptools.readthedocs.io/en/develop/ for more information. Below is our example code ro run DeepTools:
 
 ```
 computeMatrix reference-point --referencePoint center \
@@ -403,15 +400,16 @@ plotHeatmap \
 -m output.RPKM.gz \
 -o output.pdf
 ```
-and also used to perform t-test. We used an Rscript ```t_test_4deeptools.R``` to perform t-test at the center of the signal between in-loop and not in-loop data. To use:
+We used an Rscript ```t_test_4deeptools.R``` to perform t-test at the center of the signal between in-loop and not in-loop data.
+
 ```
 Rscript t_test_4deeptools.R /PATH/TO/inloop.RPKM.gz /PATH/TO/notinloop.RPKM.gz
 ```
-It will print out the t-test result.
 
 ### 6B. Average chromatin accessibility levels (%) of active promoters, enhancers, insulators, and NDRs without features that are in loop vs those that are not in loop 
 
-This panel are generated using Bistools (Lay et al, 2015). Here we provide our example code to run Bistools. Basically, we used bistools to visualize NOMe-seq signal around interested sites (e.g. promoter, enhancer, insulator etc.) in density plot, average plot and heatmap.  To make these graphs, the necessary input files are the ```HCG.bw```(DNA methylation) and ```GCH.bw```(chromatin accessibility), which are generated from NOMe-seq data using Bis-SNP ([Liu et al. 2012](https://genomebiology.biomedcentral.com/articles/10.1186/gb-2012-13-7-r61)), as well as a ```.bed``` file (e.g. Histong Modification or CTCF narrowPeak file) which is used to specify the regions where you want to plot the signals.
+This panel plots were generated using Bis-tools (Lay et al, 2015, PMID: XXXX). Please refer this github page for more usage instruction of Bis-tools (https://github.com/dnaase/Bis-tools, PMID: XXX).
+To make these graphs, the necessary input files, which are the ```HCG.bw```(DNA methylation) and ```GCH.bw```(chromatin accessibility), are generated from NOMe-seq data using Bis-SNP ([Liu et al. 2012](https://genomebiology.biomedcentral.com/articles/10.1186/gb-2012-13-7-r61), PMID: XXX).
 
 To generate average plot:
 ```
@@ -453,8 +451,6 @@ perl alignWigToBed.DKO_paper_version.pl \
 Twosamples.txt
 ```
 
-Please refer this github page for more usage instruction of Bis-tools (https://github.com/dnaase/Bis-tools, PMID: XXX).
-
 ### 6C. Average DNA methylation levels of active promoters, enhancers, insulators, and NDRs without features that are in loop vs those that are not in loop 
 
-Please refer to 6B for the visualization of DNA methylation signals.
+Please refer to 6B.
