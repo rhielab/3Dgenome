@@ -359,6 +359,8 @@ The output is a bunch of loop files with different regulatory elements combinati
 
 ### 4D. Comparison of number of promoter-enhancer loops identified from Hi-C 1 billion, Micro-C 1 billion, 2 billion and 3 billion data
 
+Please refer to 4C for the analysis to identify promoter-enhancer loops.
+
 ### 4E. Significance of chromatin interaction (q-value identified by Mustache) for top 5 loop categories
 
 Here we show an example Rscript ```plot_average_q_value.R``` to generate the q-value violin plot of different chromatin interactions. Please noted that the input ```.tsv``` files are generated from the ```Loop_Rep_overlapAnalysis.R``` Rscript as described above.
@@ -412,9 +414,7 @@ It will print out the t-test result.
 
 ### 6B. Average chromatin accessibility levels (%) of active promoters, enhancers, insulators, and NDRs without features that are in loop vs those that are not in loop 
 
-### 6C. Average DNA methylation levels of active promoters, enhancers, insulators, and NDRs without features that are in loop vs those that are not in loop 
-
-Panel C and D are generated using Bistools (Lay et al, 2015). Here we provide our example code to run Bistools. Basically, we used bistools to visualize NOMe-seq signal around interested sites (e.g. promoter, enhancer, insulator etc.) in density plot, average plot and heatmap.  To make these graphs, the necessary input files are the ```HCG.bw``` and ```GCH.bw```, which are generated from NOMe-seq data using Bis-SNP ([Liu et al. 2012](https://genomebiology.biomedcentral.com/articles/10.1186/gb-2012-13-7-r61)), as well as a ```.bed``` file (e.g. Histong Modification or CTCF narrowPeak file) which is used to specify the regions that you want to plot the signals on.
+This panel are generated using Bistools (Lay et al, 2015). Here we provide our example code to run Bistools. Basically, we used bistools to visualize NOMe-seq signal around interested sites (e.g. promoter, enhancer, insulator etc.) in density plot, average plot and heatmap.  To make these graphs, the necessary input files are the ```HCG.bw```(DNA methylation) and ```GCH.bw```(chromatin accessibility), which are generated from NOMe-seq data using Bis-SNP ([Liu et al. 2012](https://genomebiology.biomedcentral.com/articles/10.1186/gb-2012-13-7-r61)), as well as a ```.bed``` file (e.g. Histong Modification or CTCF narrowPeak file) which is used to specify the regions that you want to plot the signals on.
 
 To generate average plot:
 ```
@@ -458,3 +458,6 @@ Twosamples.txt
 
 Please refer this github page for more usage instruction of Bis-tools (https://github.com/dnaase/Bis-tools, PMID: XXX).
 
+### 6C. Average DNA methylation levels of active promoters, enhancers, insulators, and NDRs without features that are in loop vs those that are not in loop 
+
+Please refer to 6B for the analysis.
