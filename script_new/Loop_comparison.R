@@ -4,6 +4,7 @@ library(dplyr)
 loop_comparison <- function(
 loop_list, #Should be a list containing all the loop data with corresponding names and ordered by priority. Make sure that it get named!
 priority = seq(length(loop_list)),
+resolution,
 output_path
 ){
 #Get the total length and names of loop list
@@ -55,8 +56,8 @@ for(i in seq(nrow(names_comb))){
         for(k in x){
                 chr_1st <- loop_list[[fir]] %>% filter(V1 == k)
                 chr_2nd <- loop_list[[sec]] %>% filter(V1 == k)
-                some_count_1st <- difference_semi_join(chr_1st,chr_2nd, max_dist= 10000, by = c("V2","V3","V5","V6"))
-                some_count_2nd <- difference_semi_join(chr_2nd,chr_1st, max_dist= 10000, by = c("V2","V3","V5","V6"))
+                some_count_1st <- difference_semi_join(chr_1st,chr_2nd, max_dist= 2*resolution, by = c("V2","V3","V5","V6"))
+                some_count_2nd <- difference_semi_join(chr_2nd,chr_1st, max_dist= 2*resolution, by = c("V2","V3","V5","V6"))
                 data1 <- rbind(data1, some_count_1st)
                 data2 <- rbind(data2, some_count_2nd)
                 } # end second for
