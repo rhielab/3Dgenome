@@ -141,10 +141,11 @@ LOOP1 = loop_1
 )
 ```
 
-Run the function using the list just created. The overlap will be calculated based on the priority same as the order in the list in deafault.
+Run the function using the list just created. The overlap will be calculated based on the priority same as the order in the list by default. The resolution argument is the resolution of your interaction data in bp.
 ```
 loop_comparison(
 loop_list = loop_list,
+resolution = 5000,
 output_path= './output'
 )
 ```
@@ -153,7 +154,8 @@ Or if you want a different priority. For example, loop_1 > loop_2 > loop_3 > loo
 ```
 loop_comparison(
 loop_list = loop_list,
-priority = c(4,3,2,1)
+priority = c(4,3,2,1),
+resolution = 5000,
 output_path= './output2'
 )
 ```
