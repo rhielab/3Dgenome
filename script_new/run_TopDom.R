@@ -23,3 +23,4 @@ matrix_tsv <- paste0(prefix_name,"_",i,"_",resolution,"bp.matrix",sep="")
 write_tsv(mat, file = matrix_tsv, col_names = FALSE)
 topdom_out <- paste0(prefix_name,"_",i,"_",resolution,"bp.topdom",sep="")
 TopDom(data = matrix_tsv, window.size = 5,outFile=topdom_out)
+}
